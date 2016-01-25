@@ -1,3 +1,4 @@
+# -*- coding: cp1251 -*-
 from flask import Flask
 
 app = Flask(__name__, template_folder='../templates')
@@ -8,7 +9,10 @@ class Town(object):
 
     def __init__(self):
         self.name = ''
-        self.temperature = '-5C'
+        self.temperature = ''
+        self.comment = ''
+
+towntable = {'dzerzhinsk': ['972', 'Дзержинск'], 'moscow': ['moscow', 'Москва']}
 
 town = Town()
 
